@@ -12,7 +12,7 @@
     window.addEventListener("message", onReceivedPostMessage, false);
 
     function postMessageToiOS(postData) {
-        window.webkit.messageHandlers.callBackHandler.postMessage(postData);
+        window.webkit.messageHandlers.addressSelected.postMessage(JSON.stringify(postData));
     }
 
     var element_layer = document.getElementById('layer');
